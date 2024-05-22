@@ -1,96 +1,25 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ titulo }}</h1>
+    <p>Bienvenido a qEdu, tu plataforma de aprendizaje!</p>
+    <h3>Descubre, Aprende y Crece</h3>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
+      qEdu te proporciona las herramientas y recursos para dominar nuevas
+      habilidades y conocimientos. ¡Comienza tu viaje de aprendizaje hoy mismo!
     </p>
-    <h3>Installed CLI Plugins</h3>
+    <h3>¿Por qué elegir qEdu?</h3>
     <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest"
-          target="_blank"
-          rel="noopener"
-          >unit-jest</a
-        >
-      </li>
+      <li>Cursos completos diseñados por expertos.</li>
+      <li>Experiencias de aprendizaje interactivas y atractivas.</li>
+      <li>Recorridos de aprendizaje personalizados.</li>
+      <li>Proyectos y evaluaciones del mundo real.</li>
     </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
-    </ul>
+    <h3>Empezar</h3>
+    <p>
+      Únete a qEdu y lleva tu aprendizaje al siguiente nivel. ¡Ya sea que seas
+      principiante o experto, siempre hay algo nuevo por aprender!
+    </p>
+    <button @click="comenzarAprendizaje">Comenzar Ahora</button>
   </div>
 </template>
 
@@ -98,25 +27,73 @@
 export default {
   name: "HelloWorld",
   props: {
-    msg: String,
+    titulo: {
+      type: String,
+      default: "Bienvenido a qEdu",
+    },
+  },
+  methods: {
+    comenzarAprendizaje() {
+      // Implementa la lógica para navegar al curso o módulo
+      console.log("Redirigiendo al curso...");
+    },
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+.hello {
+  text-align: center;
+  margin-top: 40px;
 }
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+h3 {
+  margin: 20px 0 10px;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
+  text-align: left;
+  margin-bottom: 20px;
 }
+
 li {
-  display: inline-block;
-  margin: 0 10px;
+  margin-bottom: 10px;
 }
+
+button {
+  padding: 10px 20px;
+  background-color: #42b983;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #34a272;
+}
+
 a {
   color: #42b983;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 </style>
